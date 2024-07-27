@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:badges/badges.dart' as badges;
+import 'package:layout/style/app_color.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,10 +8,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Column(
+      body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               //   text widgets
@@ -17,18 +19,34 @@ class HomeScreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Hello Smith!',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                    ),
+                    const Text(
+                      "You've got",
+                      style:
+                          TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "You've got 4 task today",
-                      style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-                    )
+                      "4 task today",
+                      style:
+                          TextStyle(
+                              color: AppColor().appGreen,
+                              fontSize: 28, fontWeight: FontWeight.bold),
+                    ),
                   ],
                 ),
-              //   img
-                Image(image: AssetImage('assets/images/profile.png'), width: 100, height: 100,)
+                //   img
+                const badges.Badge(
+                  badgeContent: Text('3'),
+                  child: Image(
+                    image: AssetImage('assets/images/profile.webp'),
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
               ],
             ),
           )
