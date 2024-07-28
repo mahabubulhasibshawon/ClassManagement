@@ -8,6 +8,8 @@ This Flutter project showcases a Class Management UI, featuring a header section
 - **Courses Section**: Displays all courses for the user in a structured manner.
 - **Schedule Section**: Lists details such as course name, chapter to read today, time, and faculty name. Each course and schedule card is designed using `Container`.
 
+## Screen Records
+
 ## Getting Started
 
 ### Prerequisites
