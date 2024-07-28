@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layout/component/header_component.dart';
-
+import 'package:layout/component/schedule_component.dart';
 import '../component/course_component.dart';
-
-
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,11 +9,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: const Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           HeaderComponent(),
-          CourseComponent()
+          CourseComponent(),
+          ScheduleComponent()
         ],
       ),
       bottomNavigationBar: NavigationBar(
